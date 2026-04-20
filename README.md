@@ -16,7 +16,7 @@ This repo is intentionally minimal. It is meant to document and share the integr
 
 ## Install this skill
 
-There are two practical ways to use this repository.
+There are three practical ways to use this repository.
 
 ### Option 1: Read the skill directly from this repo
 
@@ -28,25 +28,40 @@ Open these files and follow the documented integration steps:
 
 This is the best option if you want to copy the approach into your own Hermes fork or PR.
 
-### Option 2: Add this repo as a custom skill source
+### Option 2: Add this repo as a custom skill source (recommended for Hermes users)
 
-If your Hermes install supports custom skill repos via taps, add this repository as a tap:
+This repository now includes the skill under:
+
+- `skills/surfshark-telegram-wireguard-controls/SKILL.md`
+
+Add the repo as a tap:
 
 ```bash
 hermes skills tap add ShuKaiHu/hermes-agent-surfshark-telegram-controls
 ```
 
-Then browse, search, or install from that source using the normal Hermes skills workflow.
+Then browse or search it:
 
-### Publish note
+```bash
+hermes skills browse
+hermes skills search surfshark
+```
 
-If you want this skill to become directly installable through broader Hermes discovery flows, you can also publish it through the Hermes skills publishing workflow from a local skill directory, for example:
+And install when it appears in your local Hermes skills workflow.
+
+### Option 3: Use the skill as a published source repo
+
+If you are publishing or mirroring skills from a local skill directory, this repository can also be used as the GitHub target:
 
 ```bash
 hermes skills publish /path/to/surfshark-telegram-wireguard-controls --to github --repo ShuKaiHu/hermes-agent-surfshark-telegram-controls
 ```
 
-The exact supported publish/install UX depends on the Hermes version in use, but this repository is structured to work as a clean public skill source.
+### Notes
+
+- Tap/install UX can vary slightly depending on Hermes version.
+- If your Hermes build supports direct GitHub-backed skill discovery, this repo is structured to work as a clean public source.
+- If you mainly want to learn the integration and reproduce it yourself, reading `SKILL.md` directly is still the simplest path.
 
 ## What this integration does
 
