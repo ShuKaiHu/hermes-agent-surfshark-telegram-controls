@@ -1,4 +1,4 @@
-# Hermes Surfshark Telegram Controls
+# Hermes Agent Surfshark Telegram Controls
 
 A clean, shareable repository for a Hermes Agent integration that adds Surfshark WireGuard controls, Telegram inline buttons, and a live status panel.
 
