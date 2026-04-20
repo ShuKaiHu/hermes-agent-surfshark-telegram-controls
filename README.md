@@ -14,6 +14,40 @@ This repo is intentionally minimal. It is meant to document and share the integr
   - `docs/upstream-pr-notes.md`
 - License information
 
+## Install this skill
+
+There are two practical ways to use this repository.
+
+### Option 1: Read the skill directly from this repo
+
+Open these files and follow the documented integration steps:
+
+- `SKILL.md`
+- `docs/setup.md`
+- `docs/upstream-pr-notes.md`
+
+This is the best option if you want to copy the approach into your own Hermes fork or PR.
+
+### Option 2: Add this repo as a custom skill source
+
+If your Hermes install supports custom skill repos via taps, add this repository as a tap:
+
+```bash
+hermes skills tap add ShuKaiHu/hermes-agent-surfshark-telegram-controls
+```
+
+Then browse, search, or install from that source using the normal Hermes skills workflow.
+
+### Publish note
+
+If you want this skill to become directly installable through broader Hermes discovery flows, you can also publish it through the Hermes skills publishing workflow from a local skill directory, for example:
+
+```bash
+hermes skills publish /path/to/surfshark-telegram-wireguard-controls --to github --repo ShuKaiHu/hermes-agent-surfshark-telegram-controls
+```
+
+The exact supported publish/install UX depends on the Hermes version in use, but this repository is structured to work as a clean public skill source.
+
 ## What this integration does
 
 The integration pattern adds:
