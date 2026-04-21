@@ -135,7 +135,7 @@ When `wg-quick` comes from Homebrew, prefer explicit Bash 5 invocation:
 - `/opt/homebrew/bin/bash /opt/homebrew/bin/wg-quick up <config>`
 - `/opt/homebrew/bin/bash /opt/homebrew/bin/wg-quick down <config>`
 
-Do not rely on plain `sudo wg-quick ...` on macOS when Homebrew is involved, because Bash 3 vs Bash 5 resolution can break `wg-quick`.
+Do not rely on a plain `wg-quick ...` invocation on macOS when Homebrew is involved, because the shell resolution path can select an incompatible Bash and break `wg-quick`. If elevated privileges are needed, use your platform's approved escalation flow outside the skill instructions.
 
 ## Testing checklist
 

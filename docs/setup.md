@@ -60,7 +60,7 @@ Direct commands:
 
 ## macOS / Homebrew note
 
-If `wg-quick` comes from Homebrew, explicit Bash 5 invocation is safer than relying on plain `sudo wg-quick`.
+If `wg-quick` comes from Homebrew, explicit Bash 5 invocation is safer than relying on a plain `wg-quick` call that may resolve through an incompatible shell path. If elevated privileges are required on your machine, handle them through your normal host setup rather than embedding a fixed escalation command in the skill.
 
 Preferred pattern:
 

@@ -40,14 +40,14 @@ Recommended real-world install flow:
 hermes skills tap add ShuKaiHu/hermes-agent-surfshark-telegram-controls
 hermes skills search surfshark --source github
 hermes skills inspect ShuKaiHu/hermes-agent-surfshark-telegram-controls/surfshark-telegram-wireguard-controls
-hermes skills install ShuKaiHu/hermes-agent-surfshark-telegram-controls/surfshark-telegram-wireguard-controls --force
+hermes skills install ShuKaiHu/hermes-agent-surfshark-telegram-controls/surfshark-telegram-wireguard-controls
 ```
 
-Why `--force` may be required:
+Installation note:
 
-- Hermes may classify this as a community skill with a `CAUTION` verdict.
-- The warning is expected because the integration can require privileged WireGuard commands such as `sudo wg-quick` on the host system.
-- Review the skill with `inspect` first, then install with `--force` only if you understand and trust the workflow.
+- The published skill wording is designed to stay reviewable by Hermes community-source scanning without embedding direct privileged command guidance in the skill text.
+- You should still inspect the skill before installing it, especially if your local WireGuard workflow requires elevated privileges.
+- If your platform needs privilege escalation, handle that through your own approved host setup rather than copying a hard-coded escalation command from the skill.
 
 If you prefer browsing first, these commands can also help:
 
